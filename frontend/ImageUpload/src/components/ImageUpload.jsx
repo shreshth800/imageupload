@@ -34,7 +34,10 @@ const ImageUpload = ({ folderId, fetchFolder }) => {
         folderId: folderId,
       };
 
-      const response = await axios.post("/api/images", formData);
+      const response = await axios.post(
+        "https://imageupload-ten.vercel.app/api/images",
+        formData
+      );
       console.log("Image uploaded successfully:", response.data);
 
       fetchFolder(folderId);

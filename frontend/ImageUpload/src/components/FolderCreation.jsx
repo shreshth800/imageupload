@@ -12,10 +12,13 @@ const FolderCreation = ({ currentFolderId, fetchFolder }) => {
     if (!newFolderName) return;
 
     try {
-      const response = await axios.post("/api/folders", {
-        name: newFolderName,
-        parentFolderId: currentFolderId,
-      });
+      const response = await axios.post(
+        "https://imageupload-ten.vercel.app/api/folders",
+        {
+          name: newFolderName,
+          parentFolderId: currentFolderId,
+        }
+      );
 
       fetchFolder(currentFolderId);
       setNewFolderName("");

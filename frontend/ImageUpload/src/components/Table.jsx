@@ -19,7 +19,9 @@ export function TableMain() {
   const fetchFolder = async (folderId) => {
     try {
       const response = await axios.get(
-        `/api/folders/${folderId || "6690ede8662a627434eb5081"}`
+        `https://imageupload-ten.vercel.app/api/folders/${
+          folderId || "6690ede8662a627434eb5081"
+        }`
       );
       setCurrentFolder(response.data);
       setFolders(response.data.subFolders);
