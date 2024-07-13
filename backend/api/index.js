@@ -27,7 +27,7 @@ app.use("/api/folders", folderRoutes);
 app.use("/api/images", imageRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello!");
 });
 
 connectToMongoDB().then(() => {
